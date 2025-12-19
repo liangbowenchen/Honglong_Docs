@@ -8,11 +8,11 @@ hero:
   tagline: 泓心志远，龙行天下
   actions:
     - theme: brand
-      text: Markdown Examples
+      text:  认识我们
       link: /markdown-examples
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text:  开始阅读
+      link: /ElecCtrl/
 
 features:
   - title: 机械组
@@ -20,6 +20,8 @@ features:
   - title: 电控组
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
   - title: 视觉组
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 运营组
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 

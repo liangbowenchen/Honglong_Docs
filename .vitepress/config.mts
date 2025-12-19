@@ -15,16 +15,31 @@ export default defineConfig({
       provider: 'local'
     },
     nav: [
-      { text: 'Home', link: '/' },
+      { text: '战队', link: '/' },
       { text: '电控', 
         items: [
           { text: '介绍', link: '/ElecCtrl/'},
           { text: '文档', link: '/ElecCtrl/'},
           { text: '项目', link: '/ElecCtrl/projects'}
         ]},
-      { text: '视觉', link: '/api-examples' },
-      { text: '机械', link: '/guide/getting-started' },
-      { text: '其他', link: '/guide/advanced/performance' }
+     { text: '视觉', 
+        items: [
+          { text: '介绍', link: '/ElecCtrl/'},
+          { text: '文档', link: '/ElecCtrl/'},
+          { text: '项目', link: '/ElecCtrl/projects'}
+        ]},
+      { text: '机械', 
+        items: [
+          { text: '介绍', link: '/ElecCtrl/'},
+          { text: '文档', link: '/ElecCtrl/'},
+          { text: '项目', link: '/ElecCtrl/projects'}
+        ]},
+      { text: '运营', 
+        items: [
+          { text: '介绍', link: '/ElecCtrl/'},
+          { text: '文档', link: '/ElecCtrl/'},
+          { text: '项目', link: '/ElecCtrl/projects'}
+        ]},
     ],
 
     sidebar: {
