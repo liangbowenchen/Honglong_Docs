@@ -17,11 +17,16 @@ hero:
 features:
   - title: 机械组
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: /Mech
   - title: 电控组
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: /ElecCtrl
   - title: 视觉组
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: /Vision
   - title: 运营组
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: /Operation
+
 ---
 
