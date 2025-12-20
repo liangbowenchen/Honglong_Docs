@@ -2,51 +2,76 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  head : [["link", { rel: 'icon', href: '/honglong.png' }]],
   srcDir: "docs",
   title: "Honglong Docs",
   description: "A VitePress Site",
   base: "/Honglong_Docs/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-
+    logo: '/honglong.png',
     outline: 'deep',
     outlineTitle: 'On this page',
     search: {
       provider: 'local'
     },
     nav: [
-      { text: '战队', link: '/' },
+       { text: '机器人', 
+        items: [
+          { text: '步兵', link: '/Robot/infantry'},
+          { text: '英雄', link: '/Robot/hero'},
+          { text: '哨兵', link: '/Robot/sentry'},
+          { text: '工程', link: '/Robot/engineer'},
+          { text: '空中', link: '/Robot/aerial'},
+        ]},
       { text: '机械', 
         items: [
-          { text: '介绍', link: '/ElecCtrl/'},
-          { text: '文档', link: '/ElecCtrl/'},
-          { text: '项目', link: '/ElecCtrl/projects'}
+          { text: '介绍', link: '/Mech/'},
+          { text: '培训文档', link: '/Mech/docs/training'},
+          { text: '信息发布', link: '/Mech/docs/news'}
         ]},
-     { text: '电控', 
+      { text: '电控', 
         items: [
           { text: '介绍', link: '/ElecCtrl/'},
-          { text: '文档', link: '/ElecCtrl/'},
-          { text: '项目', link: '/ElecCtrl/projects'}
+          { text: '培训文档', link: '/ElecCtrl/docs/training'},
+          { text: '信息发布', link: '/ElecCtrl/docs/news'}
         ]},
       { text: '视觉', 
         items: [
-          { text: '介绍', link: '/ElecCtrl/'},
-          { text: '文档', link: '/ElecCtrl/'},
-          { text: '项目', link: '/ElecCtrl/projects'}
+          { text: '介绍', link: '/Vision/'},
+          { text: '培训文档', link: '/Vision/docs/training'},
+          { text: '信息发布', link: '/Vision/docs/news'}
         ]},
       { text: '运营', 
         items: [
-          { text: '介绍', link: '/ElecCtrl/'},
-          { text: '文档', link: '/ElecCtrl/'},
-          { text: '项目', link: '/ElecCtrl/projects'}
+          { text: '介绍', link: '/Operation/'},
+          { text: '培训文档', link: '/Operation/docs/training'},
+          { text: '信息发布', link: '/Operation/docs/news'}
+        ]},
+      { text: '关于泓龙', 
+        items: [
+          { text: '首页', link: '/'},
+          { text: '关于我们', link: ' /honglong'},
+          { text: '招新信息', link: ' /honglong/hl_news'}, 
         ]},
     ],
 
     sidebar: {
-      '/ElecCtrl': [
+      'ElecCtrl/': [
+       {
+        text: '导航',
+        items: [
+          { text: '介绍', link: '/ElecCtrl/'},
+          { text: '信息发布', link: '/ElecCtrl/docs/news'},
+          { text: '培训文档', link: '/ElecCtrl/docs/training'},
+          { text: '回到首页', link: '/'}
+        ]
+       }
+      ],
+      '/ElecCtrl/docs/training': [
       {
         text: '第0章 你缺的那门机器人课',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: '计算机篇',
             collapsed: true,
@@ -92,7 +117,7 @@ export default defineConfig({
         ]},
       {
         text: '第1章 嵌入式',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: '基础篇',
             link: '/api-examples' 
@@ -120,7 +145,7 @@ export default defineConfig({
       },
        {
         text: '第2章 算法与程序设计',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: '控制篇',
             collapsed: true,
@@ -153,7 +178,7 @@ export default defineConfig({
       },
        {
         text: '第3章 进阶，超级电控！',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: '轮腿机器人篇',
             link: '/api-examples' ,
@@ -198,7 +223,7 @@ export default defineConfig({
       },
        {
         text: '番外',
-        collapsed: false,
+        collapsed: true,
         items: [
           { text: '通信篇',
             collapsed: true,
@@ -223,11 +248,47 @@ export default defineConfig({
             link: '/api-examples' 
           }
         ]
-      }
-    ],
+      },
+      { text: '返回上级', link: '/ElecCtrl/' },
+      ],
+      'Mech/': [
+       {
+        text: '导航',
+        items: [
+          { text: '介绍', link: '/Mech/'},
+          { text: '信息发布', link: '/Mech/docs/news'},
+          { text: '培训文档', link: '/Mech/docs/training'},
+          { text: '回到首页', link: '/'}
+
+        ]
+       }
+      ],
+       'Vision/': [
+       {
+        text: '导航',
+        items: [
+          { text: '介绍', link: '/Vision/'},
+          { text: '信息发布', link: '/Vision/docs/news'},
+          { text: '培训文档', link: '/Vision/docs/training'},         
+          { text: '回到首页', link: '/'}
+        ]
+       }
+      ],
+       'Operation/': [
+       {
+        text: '导航',
+        items: [
+          { text: '介绍', link: '/Operation/'},
+          { text: '信息发布', link: '/Operation/docs/news'},
+          { text: '培训文档', link: '/Operation/docs/training'},
+          { text: '回到首页', link: '/'}
+
+        ]
+       }
+      ],
   },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/liangbowenchen/Honglong_Docs' }
     ],
     footer: {
       copyright: 'Copyright © 2024-present honglong'

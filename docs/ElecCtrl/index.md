@@ -105,7 +105,6 @@ windows 同样可用arm-gcc，使用MinGW下载ARM工具链并配置环境变量
 
 #### VSCode+CMake
 
-Eide本质上也是调用cmake 和 make 来构建工程，使用cmake更接近c/c++项目的开发流程
 
 终端 切换到 build 目录，运行
 
