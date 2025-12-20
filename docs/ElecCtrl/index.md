@@ -73,11 +73,11 @@ git clone https://gitee.com/clbw2005/honglong2025.git
 
 安装openocd
 
-<img src="E:\Users\Lanxi\Desktop\泓龙电控\文档汇总\内联图片\QQ截图20250630154649.png" style="zoom: 50%;" />
+<img src="./image/QQ截图20250630154649.png" style="zoom: 50%;" />
 
 下载keil V5.40以上版本并激活，填入MDK路径即可
 
-<img src="E:\Users\Lanxi\Desktop\泓龙电控\文档汇总\内联图片\QQ截图20250630154538.png" style="zoom: 40%;" />
+<img src="./image/QQ截图20250630154538.png" style="zoom: 40%;" />
 
 * **Linux  arm-none-eabi-gcc**
 
@@ -93,11 +93,11 @@ sudo apt install openocd #下载器
 
 > 启动文件针对keil和gcc有两个版本但名字是一样的，注意区分
 
-<img src="E:\Users\Lanxi\Desktop\泓龙电控\文档汇总\内联图片\QQ截图20250630161602.png" style="zoom: 77%;" />
+<img src="./image/QQ截图20250630161602.png" style="zoom: 77%;" />
 
 填入链接脚本(.ld)路径，勾选硬件浮点
 
-<img src="E:\Users\Lanxi\Desktop\泓龙电控\文档汇总\内联图片\QQ截图20250630155823.png" style="zoom:62%;" />
+<img src="./image/QQ截图20250630155823.png" style="zoom:62%;" />
 
 windows 同样可用arm-gcc，使用MinGW下载ARM工具链并配置环境变量即可，其他步骤相同
 
