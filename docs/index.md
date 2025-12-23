@@ -12,10 +12,10 @@ hero:
   actions:
     - theme: brand
       text:  认识我们
-      link: /honglong
+      link: /Honglong
     - theme: alt
       text:  招新信息
-      link: /honglong/hl_news
+      link: /Honglong/hl_news
 
 features:
   - title: 机械组

@@ -54,8 +54,8 @@ export default defineConfig({
       { text: '关于泓龙', 
         items: [
           { text: '首页', link: '/'},
-          { text: '关于我们', link: ' /honglong'},
-          { text: '招新信息', link: ' /honglong/hl_news'}, 
+          { text: '关于我们', link: ' /Honglong'},
+          { text: '招新信息', link: ' /Honglong/hl_news'}, 
         ]},
     ],
 
