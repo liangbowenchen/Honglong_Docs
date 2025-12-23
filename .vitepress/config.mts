@@ -12,7 +12,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: '/honglong.png',
     outline: 'deep',
-    outlineTitle: 'On this page',
+    outlineTitle: '目录',
     search: { provider: 'local'},
     docFooter: {
       prev: '上一页',
