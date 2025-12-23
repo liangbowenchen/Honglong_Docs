@@ -5,15 +5,18 @@ export default defineConfig({
   head : [["link", { rel: 'icon', href: '/honglong.png' }]],
   srcDir: "docs",
   title: "Honglong Docs",
-  description: "A VitePress Site",
- // base: "/Honglong_Docs/",
+  description: "西南石油大学RoboMaster泓龙战队文档站",
+  //base: "/Honglong_Docs/",
+  lastUpdated: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/honglong.png',
     outline: 'deep',
     outlineTitle: 'On this page',
-    search: {
-      provider: 'local'
+    search: { provider: 'local'},
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
     },
     nav: [
        { text: '机器人', 
@@ -27,26 +30,26 @@ export default defineConfig({
       { text: '机械', 
         items: [
           { text: '介绍', link: '/Mech/'},
-          { text: '培训文档', link: '/Mech/docs/training'},
-          { text: '信息发布', link: '/Mech/docs/news'}
+          { text: '培训文档', link: '/Mech/training'},
+          { text: '信息发布', link: '/Mech/news'}
         ]},
       { text: '电控', 
         items: [
           { text: '介绍', link: '/ElecCtrl/'},
-          { text: '培训文档', link: '/ElecCtrl/docs/training'},
-          { text: '信息发布', link: '/ElecCtrl/docs/news'}
+          { text: '培训文档', link: '/ElecCtrl/training'},
+          { text: '信息发布', link: '/ElecCtrl/news'}
         ]},
       { text: '视觉', 
         items: [
           { text: '介绍', link: '/Vision/'},
-          { text: '培训文档', link: '/Vision/docs/training'},
-          { text: '信息发布', link: '/Vision/docs/news'}
+          { text: '培训文档', link: '/Vision/training'},
+          { text: '信息发布', link: '/Vision/news'}
         ]},
       { text: '运营', 
         items: [
           { text: '介绍', link: '/Operation/'},
-          { text: '培训文档', link: '/Operation/docs/training'},
-          { text: '信息发布', link: '/Operation/docs/news'}
+          { text: '培训文档', link: '/Operation/training'},
+          { text: '信息发布', link: '/Operation/news'}
         ]},
       { text: '关于泓龙', 
         items: [
@@ -62,38 +65,39 @@ export default defineConfig({
         text: '导航',
         items: [
           { text: '介绍', link: '/ElecCtrl/'},
-          { text: '信息发布', link: '/ElecCtrl/docs/news'},
-          { text: '培训文档', link: '/ElecCtrl/docs/training'},
+          { text: '信息发布', link: '/ElecCtrl/news'},
+          { text: '培训文档', link: '/ElecCtrl/training'},
           { text: '回到首页', link: '/'}
         ]
        }
       ],
-      '/ElecCtrl/docs/training': [
+      '/ElecCtrl/training': [
       {
         text: '第0章 你缺的那门机器人课',
         collapsed: true,
         items: [
           { text: '计算机篇',
+            link: '/ElecCtrl/training/00_robotics_basic/computer',
             collapsed: true,
             items: [ // 二级嵌套
               {
                 text: '软件',
-                link: '/guide/advanced/theming'
+                link: '/ElecCtrl/training/00_robotics_basic/computer/software'
               },
               {
                 text: '硬件',
-                link: '/guide/advanced/performance'
+                link: '/ElecCtrl/training/00_robotics_basic/computer/hardware'
               },
               {
                 text: '网络',
-                link: '/guide/advanced/performance'
+                link: '/ElecCtrl/training/00_robotics_basic/computer/network'
               }
             ]},
           { text: '机器人篇',
-            link: '/api-examples' 
+            link: '/ElecCtrl/training/00_robotics_basic/robotics',
           },
           { text: '开发工具篇',
-            link: '/api-examples' ,
+            link: '/ElecCtrl/training/00_robotics_basic/tools',
             collapsed: true,
             items: [ // 二级嵌套
               {
@@ -109,7 +113,7 @@ export default defineConfig({
                 link: '/guide/advanced/performance'
               },
               {
-                text: 'Linux与ROS基础',
+                text: 'Linux常识与基础',
                 link: '/guide/advanced/performance'
               }
             ]
@@ -141,6 +145,23 @@ export default defineConfig({
           { text: 'DMA篇',
             link: '/api-examples' 
           },
+          { text: 'Linux篇',
+            link: '/api-examples' ,
+            items: [ // 二级嵌套
+              {
+                text: '内核基础',
+                link: '/guide/advanced/theming'
+              },
+              {
+                text: '设备树',
+                link: '/guide/advanced/performance'
+              },
+              {
+                text: 'Linux驱动',
+                link: '/guide/advanced/performance'
+              }
+            ]
+          },
         ]
       },
        {
@@ -171,7 +192,6 @@ export default defineConfig({
                 text: '数据结构',
                 link: '/guide/advanced/theming'
               },
-             
             ]
           }
         ]
@@ -201,10 +221,6 @@ export default defineConfig({
           { text: '仿真篇',
             collapsed: true,
             items: [ 
-               {
-                text: 'Gazebo',
-                link: '/guide/advanced/performance'
-              },
               {
                 text: 'Webots',
                 link: '/guide/advanced/theming'
@@ -213,12 +229,14 @@ export default defineConfig({
                 text: 'MuJoCo',
                 link: '/guide/advanced/performance'
               },
-             
+              {
+                text: 'Issac',
+                link: '/guide/advanced/performance'
+              },
             ]},
           { text: '强化学习篇',
             link: '/api-examples' 
           },
-          
         ]
       },
        {
@@ -256,8 +274,8 @@ export default defineConfig({
         text: '导航',
         items: [
           { text: '介绍', link: '/Mech/'},
-          { text: '信息发布', link: '/Mech/docs/news'},
-          { text: '培训文档', link: '/Mech/docs/training'},
+          { text: '信息发布', link: '/Mech//news'},
+          { text: '培训文档', link: '/Mech/training'},
           { text: '回到首页', link: '/'}
 
         ]
@@ -268,8 +286,8 @@ export default defineConfig({
         text: '导航',
         items: [
           { text: '介绍', link: '/Vision/'},
-          { text: '信息发布', link: '/Vision/docs/news'},
-          { text: '培训文档', link: '/Vision/docs/training'},         
+          { text: '信息发布', link: '/Vision/news'},
+          { text: '培训文档', link: '/Vision/training'},         
           { text: '回到首页', link: '/'}
         ]
        }
@@ -279,8 +297,8 @@ export default defineConfig({
         text: '导航',
         items: [
           { text: '介绍', link: '/Operation/'},
-          { text: '信息发布', link: '/Operation/docs/news'},
-          { text: '培训文档', link: '/Operation/docs/training'},
+          { text: '信息发布', link: '/Operation/news'},
+          { text: '培训文档', link: '/Operation/training'},
           { text: '回到首页', link: '/'}
 
         ]
