@@ -6,7 +6,7 @@ export default defineConfig({
   srcDir: "docs",
   title: "Honglong Docs",
   description: "A VitePress Site",
-  base: "/Honglong_Docs/",
+ // base: "/Honglong_Docs/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/honglong.png',
